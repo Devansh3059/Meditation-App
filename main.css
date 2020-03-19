@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.app{
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.time-select, .sound-picker,.player-container{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 80%;
+    align-items: center;
+    /* this is for equal width */
+}
+.player-container{
+    position: relative;
+}
+.player-container svg{
+    position: absolute;
+    height: 50%;
+    pointer-events: none;
+    transform: rotate(-90deg);
+    /* to start timer from north side */
+    /* done initially because play button is little bit below svg */
+}
+.time-display{
+    position: absolute;
+    bottom: 10%;
+    color: white;
+    font-size: 50px;
+}
+video{
+    z-index: -1;
+    position: fixed;
+    top: 0%;
+    width: 100%;
+}
+.time-select button, .sound-picker button{
+    color: white;
+    width: 30%;
+    background: none;
+    border: 2px solid white;
+    cursor: pointer;
+    border-radius: 5px;
+    height: 10%;
+    font-size: 20px;
+    transition: all 0.5s ease;
+}
+.time-select button:hover{
+    color: black;
+    background-color: white;
+}
+.sound-picker button{
+    border: none;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    padding: 30px;
+    /* done so as to reduce the size of the image */
+}
+.sound-picker button:nth-child(1){
+    background-color: #4978a2;
+}
+.sound-picker button:nth-child(2){
+    background-color: #a14f49;
+}
+.sound-picker button img{
+    height: 100%;
+    /* done so as to reduce the size of the image */
+
+}
